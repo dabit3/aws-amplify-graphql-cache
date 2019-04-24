@@ -2,7 +2,7 @@
 
 An experimental attempt at client-side caching 
 
-### Learn in Public
+### Learn & build in Public
 
 I'm keeping this repo open as I develop it in order learn this process in public.
 
