@@ -9,6 +9,7 @@ I'm keeping this repo open as I develop it in order learn this process in public
 ### Usage
 
 ```js
+// provider level
 import { CacheProvider } from './cacheStore'
 
 const AppWithProvider = () => (
@@ -17,12 +18,9 @@ const AppWithProvider = () => (
   </CacheProvider>
 )
 
+// consumer level, some component
 import { withCache } from './cacheStore'
-
-export default withCache(SomeComponent);
-
-// SomeComponent
-import { getTodo as GetTodo, listTodos as ListTodos } from './graphql/queries'
+import { listTodos as ListTodos } from './graphql/queries'
 
 // in the component
 const { amplifyCache: { cacheState, fetchAndCache }} = props
@@ -35,5 +33,7 @@ useEffect(() => {
 {
   items.map(t => t.name)
 }
+
+export default withCache(SomeComponent);
 ```
 
